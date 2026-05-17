@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Space Grotesk", monospace;
+
+  /* Editorial Aesthetic Palette */
+  --color-brand-offwhite: #F4F1EE;
+  --color-brand-paper: #FAF9F7;
+  --color-brand-beige: #E8E4DF;
+  --color-brand-charcoal: #121212;
+  --color-brand-stone: #8C8984;
+  --color-brand-olive: #4A4844;
+  
+  --border-brand-thin: 1px solid rgba(18, 18, 18, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-offwhite text-brand-charcoal selection:bg-brand-charcoal selection:text-brand-offwhite;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    @apply tracking-tighter;
+  }
+}
+
+.glass-nav {
+  @apply bg-brand-offwhite/80 backdrop-blur-md border-b border-brand-charcoal/10;
+}
+
+.editorial-grid {
+  @apply border-brand-charcoal/10;
+}
+
+.text-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.italic-serif {
+  font-family: var(--font-serif);
+  @apply italic;
+}
+
+.label-xs {
+  @apply text-[10px] uppercase tracking-[0.3em] font-bold;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-offwhite;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-charcoal;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "ÆTHER Streetwear",
+  "description": "Minimalist luxury streetwear brand for the modern generation. Bold typography, premium materials, and urban aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
